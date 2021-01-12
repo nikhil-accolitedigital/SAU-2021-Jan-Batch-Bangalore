@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using JS</title>
+    <style>
+      #heading{
+        background-color: violet;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      #form
+      {
+        background-color: lightskyblue;
+        font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .form-Wrapper{
+        outline: 1px solid;
+        text-align: center;
+
+      }
+      
+    </style>
+    <script src="index.js"> </script>
+</head>
+<body>
+  <div class="form-Wrapper">
+    <h2 id=heading>Form validation</h2>
+    
+    <form name="myForm" id="form" method="POST" onsubmit=" return validate()">  
+        <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Your First Name"><br><br>
+        
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Your Last Name"><br><br>        
+        
+        <lable for="gender">Gender</lable><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        
+        <lable for="course"> JS Course</lable><br>
+        <select name="course">
+            <option value="angular">Angular JS</option>
+            <option value="react">React JS</option>
+            <option value="node">Node JS</option>
+            <option value="particle">Particle JS</option>
+            <option value="vanilla">Vanilla JS</option>
+            <option value="vue">Vue JS</option>
+        </select><br><br>
+
+        <lable for="email">Email Id</lable><br>
+        <input type="email" id="email" name="email" placeholder="Your Email id"><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
+
