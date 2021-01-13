@@ -1,0 +1,94 @@
+/* created a new bucket cricketDB 
+
+create primary index on cricketDB 
+
+
+/* Inserting values in the cricketDB */
+
+insert into cricketDB values
+("1", {
+ "Name" : "Virat Kohli",
+ "jerseyNo" : 18,
+ "age" : 30,
+ "average" : 60.8,
+ "runs" : 22000 ,
+ "wickets": 7
+}),
+("2", {
+ "Name" : "Rohit Sharma",
+ "jerseyNo" : 16,
+ "age" : 31,
+ "average" : 55.89,
+ "runs" : 16089 ,
+ "wickets": 12
+}),
+("3", {
+ "Name" : "Shikhar Dhawan",
+ "jerseyNo" : 15,
+ "age" : 36,
+ "average" : 43.63,
+ "runs" : 18362 ,
+ "wickets": 0
+}),
+("4", {
+ "Name" : "Mahendra Singh Dhoni",
+ "jerseyNo" : 7,
+ "age" : 39,
+ "average" : 51.66,
+ "runs" : 14523 ,
+ "wickets": 2
+}),
+("5", {
+ "Name" : "Suresh Raina",
+ "jerseyNo" : 26,
+ "age" : 38,
+ "average" : 44.60,
+ "runs" : 9325 ,
+ "wickets": 0
+}),
+("6", {
+ "Name" : "Virendra Sehwag",
+ "jerseyNo" : 4,
+ "age" : 41,
+ "average" : 49.32,
+ "runs" : 15623 ,
+ "wickets": 85
+})
+
+("7", {
+ "Name" : "VVS Laxman",
+ "jerseyNo" : 13,
+ "age" : 45,
+ "average" : 54.84,
+ "runs" : 15632 ,
+ "wickets": 2
+})
+
+("5", {
+ "Name" : "Harbhajan Singh",
+ "jerseyNo" : 45,
+ "age" : 44,
+ "average" : 32.56,
+ "runsScored" : 4523 ,
+ "wicketsTaken": 93
+})
+
+
+/* Queries*/
+
+select * from cricketDB where runs > 10000;
+
+select * from cricketDB where average > 50;
+
+
+
+
+
+/* 4. Removing primary index on cricketdb */
+
+drop primary index on cricketDB;
+
+/* Create a new index on cricketdb */
+
+create index runs on cricketDB (runs);
+
