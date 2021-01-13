@@ -1,0 +1,112 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+
+
+.grid-container {
+
+  background-image: url("image4.jfif");
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'menu main main main main main';
+  grid-gap: 20px;
+  background-color: #afd2ee;
+  padding: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* //text-align: center; */
+  padding: 20px 2;
+  /*font-size: 30px;*/
+  padding-top: 20px;
+}
+.item2{
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  font-size: 30px;
+}
+
+.head{
+  font-size: 40px;
+  padding: 10px 20px 10px 10px;
+  font-family: monospace;
+}
+ .head:hover{
+  font-size: 50px;
+}
+.photo
+{
+  height: 200px;
+  width: 200px;
+  border-color: lightcoral;
+  border-radius: 50%;
+  
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.6;
+}
+
+
+.fa-facebook {
+  background: #2754b6;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #d32433;
+  color: white;
+}
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+header h1 span {
+  color: rgb(226, 101, 17);
+  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 100px;
+  padding-left: 100px;
+  text-align: center;
+  padding-right: 10px;
+  
+  /* background-image: url("image4.jfif"); */
+}
+
+header h1 span:hover {
+  color: palevioletred ;
+  font-family: 'Fraunces', serif;
+  
+}
+
+ .academic{
+  font-size: 30px;
+  font: outline;
+  font-family: cursive;
+}
+marquee{
+  width: 80%;
+}
