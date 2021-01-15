@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using JS</title>
+    <style>
+      #heading{
+        background-color: violet;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      #form
+      {
+        
+        
+      }
+      .form-Wrapper{
+        outline: 1px solid;
+        text-align: center;
+        background-color: lightskyblue;
+        font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      
+    </style>
+    <script src="script.js"> </script>
+</head>
+<body>
+  <div class="form-Wrapper">
+    <h2 id=heading>Question-2</h2>
+    
+    <form name="myForm" id="form" method="POST" onsubmit=" return validate()">  
+        <label for="firstName">First name</label><br>
+        <input type="text" id="firstName" name="firstName" placeholder="Your First Name"><br><br>
+        
+        <label for="lastName">Last name</label><br>
+        <input type="text" id="lastName" name="lastName" placeholder="Your Last Name"><br><br>        
+        
+        <lable for="gender">Gender</lable><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="age">Age</label><br>
+        <input type="age" id="age" name="age" placeholder="Your Age"><br><br>
+
+        <label for="rollno">Roll no</label><br>
+        <input type="text" id="rollno" name="rollno" placeholder="Your Roll no."><br><br>
+
+        <label for="dob">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" ><br><br> 
+
+        <label for="occupation">Occupation</label><br>
+        <select name="occupation">
+          <option value="null">Select an option</option>
+          <option value="student">Student</option>
+          <option value="professional">Working Professional</option>
+          <option value="bussinessman">Bussinessman</option>
+          <option value="other">Other</option>
+      </select><br><br> 
+
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <label for="details">Details</label><br>
+    <br>
+        <input type="text" id="details"  placeholder="Enter the roll no. to search"><br><br>
+        <input type="button" onclick= fetchUser(details.value) value="Get Details">
+    
+        <p id="data"></p>
+      </div>
+    
+</body>
+</html>
+
