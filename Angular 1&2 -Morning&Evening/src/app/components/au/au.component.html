@@ -1,0 +1,61 @@
+<div class="app">
+    <h1 class="head">Spring AU Sessions</h1>
+<p class="au-session">AU sessions list</p>
+<button id="start" class="clickables"><a id="link" routerLink="nav">Navigate</a></button>
+<!-- <button class="Get details" >Get Details</button> -->
+<br>
+<br>
+<!-- <div class="newSession {{ (newSession? '' : 'hide') }}"> -->
+    <form  (ngSubmit)= " addNewSession()" > 
+        <label for="title" id="head" class="add" >Add a new Session</label>
+        <br><br>
+        <input type="text"  id="title" name ="title" placeholder="Enter title" [(ngModel)]="inputName">  <br>    
+        <input type="text"  id="trainer" name="trainerName" placeholder="Enter trainer name" [(ngModel)]="inputTrainer" > <br>       
+        <input type="date"  id="date" name="date" [(ngModel)]="inputDate" >
+        <br>
+        <input type="submit" value="Add" >
+        <br>
+    </form>
+
+
+
+<br><br>
+<div class="todo" *ngFor="let session of sessions; let i = index;">
+
+    
+    
+    <div (click)=showDetails(i)>
+        <div id="name">{{ session.Name }}</div><br>
+        <div class="trainer">{{ session.Trainer }}</div><br>
+        <div class="date">{{ session.Date }}</div><br>
+        
+    </div>
+
+    <div class="id">{{i}} </div>
+    <div class="content" (click)="showDetails(i)"> {{ session.Name }}</div>
+    <button class="edit" (click) ="editSession(i)" >Edit</button>
+    <button class="delete" (click) ="deleteSession(i)" >Delete</button>
+</div>
+
+<br><br>
+<br>
+
+<div *ngFor="let session of sessions; let i = index" class="session {{ (session.visible ? '' : 'deleted') }}">
+    <!-- <div class="id">{{ i }}</div> -->
+    <div (click)=showDetails(i)>
+        <div id="name">{{ session.Name }}</div><br>
+        <div class="trainer">{{ session.Trainer }}</div><br>
+        <div class="date">{{ session.Date }}</div><br>
+        
+    </div>
+    
+    <div >
+        <button class="clickables" (click)= "enable(i)">Edit</button>
+        <button class="clickables" (click)="deleteSession(i)">Delete</button>
+    </div>
+    
+</div>
+
+
+
+</div>
