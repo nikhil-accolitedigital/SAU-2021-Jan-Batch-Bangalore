@@ -36,8 +36,5 @@ public class StudentRepository {
 		return entityManager.find(Student.class,id);
 	}
 	
-	public Student getByName(String name) {
-		return entityManager.find(Student.class,name);
-	}
 
 }
