@@ -107,11 +107,11 @@ public class LibraryManager {
 			library.setPublishedYear(2015);
 			System.out.println("Updated book details ");
 			session.update(library);
-			System.out.println(library.getId());
-			System.out.println(library.getBookName());
-			System.out.println(library.getAuthorName());
-			System.out.println(library.getPrice());
-			System.out.println(library.getPublishedYear());
+			System.out.println("Book Id: "+library.getId());
+			System.out.println("Book Name: "+library.getBookName());
+			System.out.println("Author Name: "+library.getAuthorName());
+			System.out.println("Published Year: "+library.getPublishedYear());
+			System.out.println("Price: "+library.getPrice());
 			tx.commit();
 		}catch(Exception e) {
 			e.printStackTrace();
