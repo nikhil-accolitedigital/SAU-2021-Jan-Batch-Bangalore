@@ -17,10 +17,7 @@ public class DrawingApp {
 		factory.registerShutdownHook();
 		Triangle triangle = (Triangle)factory.getBean("triangle");//bean id
 		triangle.draw();
-		
-		
-		Rectangle rectangle = (Rectangle)factory.getBean("rectangle");
-		rectangle.draw();
+	
 
 	}
 
