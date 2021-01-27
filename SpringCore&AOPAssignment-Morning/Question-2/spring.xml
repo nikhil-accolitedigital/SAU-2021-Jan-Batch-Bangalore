@@ -8,8 +8,6 @@
     <property name="PointC" ref="PointC"/>-->
   </bean>
   
-   <bean id="rectangle" class="com.au.spring.Rectangle">
-   </bean>
   
   <!-- Use of .properties file  -->
   <bean id="PointA" class="com.au.spring.Point">
@@ -28,27 +26,7 @@
         <property name="y" value="${pointA.pointY}"/>
   </bean>
   
-  
-  
-  <bean id="P1" class="com.au.spring.Point">
-     	<property name="x" value="${P1.pointX}"/>
-     	<property name="y" value="${P1.pointY}"/>
-  
-  </bean>
-  <bean id="P2" class="com.au.spring.Point">
-     	<property name="x" value="${P2.pointX}"/>
-     	<property name="y" value="${P2.pointY}"/>
-  </bean>
-  <bean id="P3" class="com.au.spring.Point">
-     	<property name="x" value="${P3.pointX}"/>
-     	<property name="y" value="${P3.pointY}"/>
-  </bean>
-   
-  <bean id="P4" class="com.au.spring.Point">
-     	<property name="x" value="${P4.pointX}"/>
-     	<property name="y" value="${P4.pointY}"/>
-   </bean>
-  
+
   <!-- Own class which implements BeanFactoryPostProcessor -->
   <bean class="com.au.spring.MyBeanFactoryPP"> </bean>
   
