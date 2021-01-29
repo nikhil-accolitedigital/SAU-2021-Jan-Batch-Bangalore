@@ -18,9 +18,9 @@ public class Student {
 		super();
 		this.id = id;
 		this.name = name;
-		this.booksUnderReview = new ArrayList<Book>();;
-		this.booksInCart = new ArrayList<Book>();;
-		this.booksCheckedout = new ArrayList<Book>();;
+		this.booksUnderReview = new ArrayList<Book>();
+		this.booksInCart = new ArrayList<Book>();
+		this.booksCheckedout = new ArrayList<Book>();
 	}
 
 	public Integer getId() {
