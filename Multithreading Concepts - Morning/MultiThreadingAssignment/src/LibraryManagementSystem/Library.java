@@ -5,8 +5,8 @@ import LibraryManagementSystem.Book;
 
 public class Library {
 	
-	 public static ArrayList<Book> booksList;
-	 public static ArrayList<Student> studentsList;
+	 public static ArrayList<Book> booksList = new ArrayList<>();
+	 public static ArrayList<Student> studentsList = new ArrayList<>();
 	
 
 
