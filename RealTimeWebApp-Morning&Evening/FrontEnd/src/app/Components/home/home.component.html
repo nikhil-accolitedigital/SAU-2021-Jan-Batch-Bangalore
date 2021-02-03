@@ -1,0 +1,45 @@
+
+<form [formGroup]="form" (ngSubmit)="sort()">
+  <div class="form-group">
+    <label for="sortBy">Sort by:</label>
+    <select (change)="sort()" formControlName="sortBy" class="form-control">
+      <option>Default: Last Added</option>
+      <option *ngFor="let option of optionsList">{{option}}</option>
+    </select>
+  </div>
+</form>
+
+
+
+
+<section class="home-page">
+  
+  <div class="home-page-container">
+    <div class="list-of-word">
+      <span class="word-heading">Words</span>
+      <ng-template ngFor let-item [ngForOf]="words">
+        <div class="word">
+          <div class="meaning">
+            <strong>Word:</strong> {{item.word}}<br />
+            <strong>Part Of Speech:</strong> {{item.partOfSpeech}}<br />
+            <strong>Meaning:</strong> {{item.meaning}}<br />
+            <strong>Example Sentence:</strong> {{item.example}}<br />
+            
+          </div>
+          <div class="buttons">
+            <button (click)=edit(item)>
+              Edit
+            </button>
+            <button (click)=delete(item)>
+              Delete
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="edit-word">
+      <app-update [editableWord]="editableWord" [label]="'Update word'" (updateWord)="updateWord($event)">
+      </app-update>
+    </div>
+  </div>
+</section>
